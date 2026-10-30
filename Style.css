@@ -1,0 +1,191 @@
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background-image: url("Imgs/space2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#tela_missao {
+  background-color: #071942;
+  border: 1px solid #010a1b;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#tela_missao h1,
+#tela_missao h2 {
+  color: #1a868e;
+  text-align: center;
+  font-family: calisto;
+  font-size: 40px;
+}
+
+#tela_missao > p {
+  text-align: center;
+  line-height: 1.5;
+}
+
+#formulario {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#formulario > label:not(.opcao) {
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="date"] {
+  display: block;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 7px;
+  border: 2px solid transparent;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #10182b;
+  color: white;
+}
+
+input[type="date"] {
+  color-scheme: dark;
+}
+
+#formulario h3 {
+  color: #7bdcff;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.opcao {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 8px;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  line-height: 1.4;
+}
+
+.opcao:hover {
+  background-color: #2265e2;
+}
+
+.opcao input {
+  margin: 3px 0 0;
+  accent-color: #7bdcff;
+  flex-shrink: 0;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  border-radius: 7px;
+  border: 1px solid #4a8fa5;
+  background-color: #286b91;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #398bb5;
+}
+
+#msg {
+  color: #ffb4b4;
+  font-weight: bold;
+  text-align: center;
+}
+
+#desempate,
+#resultado {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #18233e;
+  border: 1px solid #526b9c;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#desempate p,
+#resultado p {
+  line-height: 1.5;
+}
+
+#imagem_perfil {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  margin: 15px auto;
+  border-radius: 10px;
+  border: 2px solid #7bdcff;
+}
+
+/* ESSA REGRA É IMPORTANTE PARA ESCONDER AS SEÇÕES */
+[hidden] {
+  display: none !important;
+}
+
+/* CELULAR */
+@media (max-width: 500px) {
+  main {
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  #tela_missao {
+    padding: 15px;
+  }
+
+  #tela_missao h1 {
+    font-size: 25px;
+  }
+
+  #formulario h3 {
+    font-size: 15px;
+  }
+
+  .opcao {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 13px;
+  }
+
+  #desempate,
+  #resultado {
+    padding: 15px;
+  }
+}
+

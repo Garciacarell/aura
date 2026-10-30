@@ -1,0 +1,152 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Missão Aura</title>
+  <link rel="stylesheet" href="Style.css">
+  <script src="Sketch.js" defer></script>
+</head>
+
+<body>
+  <main>
+    <div id="tela_missao">
+
+      <h1>Missão Aura</h1>
+      <p>Descubra qual é o seu perfil para participar da missão!</p>
+
+      <!-- FORMULÁRIO PRINCIPAL -->
+      <form id="formulario">
+
+        <label for="nome">Seu nome:</label>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
+
+        <label for="nascimento">Data de nascimento:</label>
+        <input type="date" id="nascimento" name="nascimento">
+
+        <h3>1. A nave apresentou um problema. O que você faria?</h3>
+
+        <label class="opcao">
+          <input type="radio" name="p1" value="1">
+          Tentaria consertar o equipamento.
+        </label>
+
+        <label class="opcao">
+          <input type="radio" name="p1" value="2">
+          Investigaria a causa do problema.
+        </label>
+
+        <label class="opcao">
+          <input type="radio" name="p1" value="3">
+          Exploraria o local para encontrar uma solução.
+        </label>
+
+        <label class="opcao">
+          <input type="radio" name="p1" value="4">
+          Organizaria a equipe para resolver a situação.
+        </label>
+
+        <h3>2. Qual atividade você mais gostaria de realizar?</h3>
+
+        <label class="opcao">
+          <input type="radio" name="p2" value="1">
+          Construir e consertar equipamentos.
+        </label>
+
+        <label class="opcao">
+          <input type="radio" name="p2" value="2">
+          Fazer pesquisas e descobertas.
+        </label>
+
+        <label class="opcao">
+          <input type="radio" name="p2" value="3">
+          Explorar lugares desconhecidos.
+        </label>
+
+        <label class="opcao">
+          <input type="radio" name="p2" value="4">
+          Planejar as atividades da equipe.
+        </label>
+
+        <h3>3. Qual dessas qualidades mais combina com você?</h3>
+
+        <label class="opcao">
+          <input type="radio" name="p3" value="1">
+          Sou uma pessoa prática e gosto de resolver problemas.
+        </label>
+
+        <label class="opcao">
+          <input type="radio" name="p3" value="2">
+          Sou curioso e gosto de aprender.
+        </label>
+
+        <label class="opcao">
+          <input type="radio" name="p3" value="3">
+          Sou aventureiro e gosto de novidades.
+        </label>
+
+        <label class="opcao">
+          <input type="radio" name="p3" value="4">
+          Sou organizado e gosto de planejar.
+        </label>
+
+        <h3>4. Você pode levar apenas um item para explorar um planeta. Qual escolheria?</h3>
+
+        <label class="opcao">
+          <input type="radio" name="p4" value="1">
+          Uma caixa de ferramentas.
+        </label>
+
+        <label class="opcao">
+          <input type="radio" name="p4" value="2">
+          Um kit de pesquisa científica.
+        </label>
+
+        <label class="opcao">
+          <input type="radio" name="p4" value="3">
+          Uma mochila de exploração.
+        </label>
+
+        <label class="opcao">
+          <input type="radio" name="p4" value="4">
+          Um mapa para planejar o caminho.
+        </label>
+
+        <button type="submit">Descobrir meu perfil</button>
+      </form>
+
+      <!-- MENSAGENS -->
+      <p id="msg" role="status"></p>
+
+      <!-- DESEMPATE: COMEÇA ESCONDIDO -->
+      <section id="desempate" hidden>
+        <h2>Desempate!</h2>
+        <p id="pergunta_desempate"></p>
+        <div id="opcoes_desempate"></div>
+
+        <button type="button" id="botao_desempate">
+          Confirmar resposta
+        </button>
+      </section>
+
+      <!-- RESULTADO: COMEÇA ESCONDIDO -->
+      <section id="resultado" hidden>
+        <h2 id="saudacao"></h2>
+
+        <img id="imagem_perfil" src="" alt="">
+
+        <h3 id="nome_perfil"></h3>
+        <p id="categoria_perfil"></p>
+        <p id="idade_perfil"></p>
+        <p id="descricao_perfil"></p>
+        <p id="recomendacao_perfil"></p>
+
+        <button type="button" id="refazer">Refazer teste</button>
+      </section>
+
+    </div>
+  </main>
+</body>
+</html>
